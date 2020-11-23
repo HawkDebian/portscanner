@@ -260,3 +260,35 @@ def scan(port14):
     
 
 scan(port14)
+
+
+port15 = 8080
+
+
+def scan(port15):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port15)):
+        print(port15, "port is closed")
+        s.close()
+    else:
+        print(port15, " port is open")
+        s.close()
+        
+scan(port15)
+
+
+port16 = 111
+
+
+def scan(port16):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port16)):
+        print(port16, "port is closed")
+        s.close()
+    else:
+        print(port16, " port is open")
+        s.close()
+        
+scan(port16)
