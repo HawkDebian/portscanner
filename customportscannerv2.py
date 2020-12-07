@@ -18,50 +18,33 @@ print('''
     #    #     #  #####   #####  
                                  
 
+                       
+
+
 ''')
 
+if len(sys.argv) == 2:
+    target = sys.argv[1]
 
+else:
 
-target = sys.argv[1]
+    print('''
+                    please give a valid value
+                    for example:
+            
+     python3 customportscannerv2.py example.com
+                             ''')
+                             
+    sys.exit()
 
-if (target == None):
+if sys.argv[1]=="help":
                     print('''
                     please give a valid value
                     for example:
             
-        python3 alltcpscan2.py example.com
+      python3 customportscannerv2.py example.com
                              ''')
-                    
-elif (target == False):
-
-                    print('''
-                    please give a valid value
-                    for example:
-            
-        python3 alltcpscan2.py example.com
-                             ''')
-                    
-
-elif (target == ""):
-
-                    print('''
-                    please give a valid value
-                    for example:
-            
-        python3 alltcpscan2.py example.com
-                             ''')
-                    
-
-elif(target == " "):
-
-                    print('''
-                    please give a valid host
-                    for example:
-            
-        python3 alltcpscan2.py example.com
-                             ''')
-                   
-
+                    sys.exit()
 else:
      print('scanning ports, please wait...')
 
