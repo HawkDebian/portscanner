@@ -292,3 +292,18 @@ def scan(port16):
         s.close()
         
 scan(port16)
+
+port17 = 6999
+
+
+def scan(port17):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port17)):
+        print(port17, "port is closed")
+        s.close()
+    else:
+        print(port17, " port is open")
+        s.close()
+        
+scan(port17)
