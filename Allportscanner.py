@@ -2,7 +2,7 @@ import socket
 import sys
 import os
 
-os.system('clear')
+os.system('clear || cls')
 
 
 
@@ -29,8 +29,8 @@ choose = input("do you want to scan UDP ports or TCP?: ")
 
     
 
-print("scanning please wait. it gonna take a while\n")
 def TCP():
+
     for i in range(100000000):
         port = i
         def scan(port):
@@ -42,6 +42,7 @@ def TCP():
         scan(port)
 
 def UDP():
+
     for j in range(100000000):
         port1 = j
         def scan(port1):
@@ -56,8 +57,14 @@ def UDP():
 l = choose.upper()
 
 if "TCP" in l:
+
+    print("scanning please wait. it gonna take a while\n")
+
     TCP()
 elif "UDP" in l:
+
+    print("scanning please wait. it gonna take a while\n")
+
     UDP()
 
 else:
