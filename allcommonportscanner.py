@@ -327,3 +327,33 @@ def scan(port18):
         s.close()
         
 scan(port18)
+
+port19 = 8810
+
+
+def scan(port19):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port19)):
+        print(port19, "port is closed")
+        s.close()
+    else:
+        print(port19, " port is open")
+        s.close()
+        
+scan(port19)
+
+port20 = 8925
+
+
+def scan(port20):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port20)):
+        print(port20, "port is closed")
+        s.close()
+    else:
+        print(port20, " port is open")
+        s.close()
+        
+scan(port20)
