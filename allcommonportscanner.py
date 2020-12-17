@@ -1,8 +1,12 @@
 import socket
 import sys
+import os
+
+
 
 
 sys.ps1 = '\033[01;32m '
+os.system('cls || clear')
 print(sys.ps1)
 print('''
 
@@ -307,3 +311,19 @@ def scan(port17):
         s.close()
         
 scan(port17)
+
+
+port18 = 3076
+
+
+def scan(port18):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(5)
+    if s.connect_ex((target, port18)):
+        print(port18, "port is closed")
+        s.close()
+    else:
+        print(port18, " port is open")
+        s.close()
+        
+scan(port18)
